@@ -12,14 +12,9 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(cookieParser());
 /*
-app.use(function(req, res, next) {
-  res.setHeader("Content-Security-Policy", "script-src 'self' http://myapp.vn");
-  return next();
-});
-*/
-/*
 app.use(cors({
-  origin: 'https://myapp.vn',
+  //origin: 'https://myapp.vn', for one domain
+  origin: ['https://myapp.vn', 'https://test.vn'], //for multi domain
   credentials: true,
   optionsSuccessStatus: 200,
 }));
@@ -44,13 +39,15 @@ const users = [
 ];
 //Test app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/test', (req, res) => {
-  console.log(req.cookies);
-  res.cookie('myCookie', 'cookieValue', {
-    sameSite: 'None',
-    httpOnly: true,
-    secure: true // Set this to true if served over HTTPS
-  });
-  res.send('Hello from Node.js 2!');
+  const responseData = { message: 'Hello, JSONP!' };
+  // Check if a callback parameter is provided in the query string
+  const callback = req.query.callback;
+  if (callback) {
+    res.jsonp(responseData, );
+  } else {
+    // Respond with JSON if no callback is provided
+    res.json(responseData);
+  }
 });
 app.get('/view', (req, res) => {
   // Access the session and store some data
