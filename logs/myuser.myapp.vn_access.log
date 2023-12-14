@@ -91,3 +91,8 @@
 192.168.65.1 - - [14/Dec/2023:08:33:46 +0000] "GET /test HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 192.168.65.1 - - [14/Dec/2023:08:35:39 +0000] "GET /view HTTP/1.1" 200 42 "https://myapp.vn/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 192.168.65.1 - - [14/Dec/2023:08:35:39 +0000] "GET /test HTTP/1.1" 304 0 "https://myapp.vn/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+192.168.65.1 - - [14/Dec/2023:08:45:27 +0000] "GET /view HTTP/1.1" 200 42 "https://myapp.vn/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+192.168.65.1 - - [14/Dec/2023:08:45:28 +0000] "GET /test HTTP/1.1" 304 0 "https://myapp.vn/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+192.168.65.1 - - [14/Dec/2023:08:46:01 +0000] "GET /view HTTP/1.1" 200 42 "https://myapp.vn/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+192.168.65.1 - - [14/Dec/2023:08:46:02 +0000] "GET /test HTTP/1.1" 304 0 "https://myapp.vn/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+192.168.65.1 - - [14/Dec/2023:09:04:20 +0000] "GET /test HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"

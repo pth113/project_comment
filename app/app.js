@@ -11,7 +11,6 @@ app.get('/', (req, res) => {
     sameSite: 'Strict',
     domain: '.myapp.vn',
     httpOnly: true,
-    priority: 'High',
     secure: true // Set this to true if served over HTTPS
   });
   res.render('index', { title: 'Express with EJS' });

@@ -46,8 +46,9 @@ app.get('/test', (req, res) => {
   //set cookie
   console.log(req.cookies);
   req.session.views = (req.session.views || 0) + 1;
-  res.cookie('myCookie', 'cookieValue', {
+  res.cookie('myCookie2', 'cookieValue', {
     sameSite: 'None',
+    domain: 'myapp.vn',
     httpOnly: true,
     secure: true // Set this to true if served over HTTPS
   });
