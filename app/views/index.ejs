@@ -67,6 +67,9 @@
             $.ajax({
                 type: "get",
                 url: "https://myuser.myapp.vn/test",
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function (response) {
                     console.log('Response result');
                     console.log(response);
