@@ -12,13 +12,17 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(cookieParser());
 /*
+app.use(function(req, res, next) {
+  res.setHeader("Content-Security-Policy", "script-src 'self' http://myapp.vn");
+  return next();
+});
+*/
 app.use(cors({
   //origin: 'https://myapp.vn', for one domain
   origin: ['https://myapp.vn', 'https://test.vn'], //for multi domain
   credentials: true,
   optionsSuccessStatus: 200,
 }));
-*/
 app.use(
   session({
     secret: 'quangtv',

@@ -39,6 +39,7 @@
         <a href="https://myuser.myapp.vn/view">View</a>
         <img src="https://myuser.myapp.vn/view">
         <script>
+            /*
             function localJsonpCallback(response) {
                 console.log('Response result with my callback');
                 console.log(response);
@@ -52,9 +53,6 @@
                     success: function (response) {
                         console.log('Response result with default callback of Jquery');
                         console.log(response);
-                    },
-                    error: function(xhr, status) {
-                        console.log('ajax.error');
                     }
                 });
             $.ajax({
@@ -65,6 +63,21 @@
                 dataType: "jsonp",
                 jsonpCallback: "localJsonpCallback",
             });
+            */
+            $.ajax({
+                type: "get",
+                url: "https://myuser.myapp.vn/test",
+                // The name of the callback parameter, as specified by the YQL service
+                // Tell jQuery we're expecting JSONP
+                success: function (response) {
+                    console.log('Response result');
+                    console.log(response);
+                },
+                error: function(xhr, status) {
+                    console.log('ajax.error');
+                }
+            });
+
         function login() {
                 /*
                 fetch('https://myuser.myapp.vn/view', {
