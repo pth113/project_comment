@@ -43,6 +43,14 @@ const users = [
 ];
 //Test app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/test', (req, res) => {
+  //set cookie
+  console.log(req.cookies);
+  req.session.views = (req.session.views || 0) + 1;
+  res.cookie('myCookie', 'cookieValue', {
+    sameSite: 'None',
+    httpOnly: true,
+    secure: true // Set this to true if served over HTTPS
+  });
   const responseData = { message: 'Hello, JSONP!' };
   // Check if a callback parameter is provided in the query string
   const callback = req.query.callback;
