@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+      - ./ssl:/var/www/ssl
+      - ./logs:/data/www/logs
+
+  nodejs_app:
+    image: node:latest
+    working_dir: /app
+    volumes:
+      - type: bind
+        source: ./app
+        target: /app
+    command: sh -c "npm install && npm run dev"
+
+  nodejs_app_sso:
+    image: node:latest
+    working_dir: /app
+    volumes:
+      - type: bind
+        source: ./app_sso
+        target: /app
+    command: sh -c "npm install && npm run dev"
+    environment:
+      - MEMCACHED_HOST=memcached
+      
+  memcached:
+    image: memcached:latest
+    container_name: my_memcached
+    ports:
+      - "11211:11211"
+    environment:
+      - MEMCACHED_ENABLE_CAS=true

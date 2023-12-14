@@ -1,0 +1,10 @@
+https://www.freecodecamp.org/news/how-to-get-https-working-on-your-local-development-environment-in-5-minutes-7af615770eec
+
+Step PEM 
+Country Name (2 letter code) [AU]:vn
+State or Province Name (full name) [Some-State]:hcm
+Locality Name (eg, city) []:ho chi minh
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:personal
+Organizational Unit Name (eg, section) []:personal
+Common Name (e.g. server FQDN or YOUR name) []:Https localhost
+Email Address []:vanquang6789@gmail.com

@@ -1,0 +1,2 @@
+2023/12/12 14:03:23 [error] 28#28: *1 open() "/var/www/public_html/myapp.vn/public/geicoimg.gif" failed (2: No such file or directory), client: 192.168.65.1, server: myapp.vn, request: "GET /geicoimg.gif HTTP/1.1", host: "myapp.vn", referrer: "http://myapp.vn/"
+2023/12/12 14:03:23 [error] 28#28: *1 open() "/var/www/public_html/myapp.vn/public/favicon.ico" failed (2: No such file or directory), client: 192.168.65.1, server: myapp.vn, request: "GET /favicon.ico HTTP/1.1", host: "myapp.vn", referrer: "http://myapp.vn/"
